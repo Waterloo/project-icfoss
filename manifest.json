@@ -1,0 +1,33 @@
+    {
+        "description": "Select text. Right click. Search  for the selected text.",
+        "manifest_version": 2,
+        "name": "Malayalam Wordnet",
+        "version": "1.0",
+        "icons": {
+            "64": "index.png"
+        },
+        
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        },
+       
+        "permissions": [
+            "activeTab",
+            "tabs",
+            "storage",
+            "contextMenus"
+        ],
+         "browser_action": {
+        "default_icon": "icons/index.png",
+        "default_title": "Beastify",
+        "default_popup": "popup/choose_beast.html"
+  },
+        "content_scripts": [
+    {
+      "matches": ["http://www.cfilt.iitb.ac.in/*"],
+      "js": ["borderify.js"]
+    }
+  ]
+    }
